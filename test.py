@@ -1,4 +1,4 @@
-expected_variable = "d"
+expected_variable = "c"
 actual_variable = "c"
 
 print("Code 2 expects:", expected_variable)
