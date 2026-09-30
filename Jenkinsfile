@@ -32,8 +32,10 @@ pipeline {
         cp code1.py deployed/app.py
         '''
 
-        echo 'Application deployed successfully!'
-        sh 'ls -l deployed'
+        echo 'Running deployed application...'
+        sh 'python3 deployed/app.py'
+
+        echo 'DEPLOYMENT SUCCESSFUL!'
     }
 }
     }
