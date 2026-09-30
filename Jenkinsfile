@@ -24,10 +24,18 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                echo 'Deploying project...'
-            }
-        }
+    steps {
+        echo 'Deploying application...'
+
+        sh '''
+        mkdir -p deployed
+        cp code1.py deployed/app.py
+        '''
+
+        echo 'Application deployed successfully!'
+        sh 'ls -l deployed'
+    }
+}
     }
 
     post {
